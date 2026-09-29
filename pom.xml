@@ -11,8 +11,8 @@
 	<groupId>com.senacsp</groupId>
 	<artifactId>CadastroDeFuncionarios</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>CadastroDeFuncionarios</name>
+	<description>API REST para cadastro e gerenciamento de funcionários</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -38,6 +38,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
