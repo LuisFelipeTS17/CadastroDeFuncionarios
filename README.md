@@ -2,9 +2,8 @@
 
 Aplicação Spring Boot para cadastro e gerenciamento de funcionários.
 
-> **Status:** projeto recém-inicializado. A estrutura base do Spring Boot está pronta
-> (aplicação, build e teste de contexto), mas as entidades, repositórios, serviços e
-> endpoints do domínio ainda serão implementados.
+> **Status:** em desenvolvimento. A estrutura base do Spring Boot está pronta e o
+> primeiro endpoint (`/funcionarios/boasvindas`) já está disponível.
 
 ## Tecnologias
 
@@ -40,6 +39,19 @@ mvnw.cmd spring-boot:run
 
 A aplicação sobe em `http://localhost:8080`.
 
+## Endpoints
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| `GET` | `/funcionarios/boasvindas` | Retorna uma mensagem de boas-vindas |
+
+Exemplo:
+
+```bash
+curl http://localhost:8080/funcionarios/boasvindas
+# Essa é a minha primeira rota
+```
+
 ## Build
 
 Gerar o `.jar` executável:
@@ -69,7 +81,9 @@ CadastroDeFuncionarios/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/senacsp/CadastroDeFuncionarios/
-│   │   │   └── CadastroDeFuncionariosApplication.java   # classe principal
+│   │   │   ├── CadastroDeFuncionariosApplication.java   # classe principal
+│   │   │   └── controller/
+│   │   │       └── FuncionarioController.java           # rotas /funcionarios
 │   │   └── resources/
 │   │       └── application.properties                   # configurações
 │   └── test/
