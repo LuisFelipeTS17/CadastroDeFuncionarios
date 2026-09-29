@@ -1,6 +1,9 @@
-package com.senacsp.CadastroDeFuncionarios.Model;
+package com.senacsp.CadastroDeFuncionarios.Funcionarios;
 
+import com.senacsp.CadastroDeFuncionarios.Tarefas.TarefasModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 
 @Entity
@@ -14,6 +17,10 @@ public class FuncionarioModel {
     private int idade;
     private String email;
     private String nome;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "tarefa_id")
+    private TarefasModel tarefas;
 
     public FuncionarioModel() {
     }
